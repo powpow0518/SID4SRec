@@ -5,7 +5,7 @@ import functools
 import torch
 import numpy as np
 from tqdm import tqdm, trange
-from models.id4srec import ID4SRec
+from models.sid4srec import ID4SRec
 from models.cadirec_diffusion import SpacedDiffusion,space_timesteps
 from utils import get_full_sort_score, EarlyStopping, linear
 from models import cadirec_diffusion as gd
