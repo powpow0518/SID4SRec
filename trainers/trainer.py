@@ -5,7 +5,7 @@ import functools
 import torch
 import numpy as np
 from tqdm import tqdm, trange
-from models.sid4srec import ID4SRec
+from models.sid4srec import SID4SRec
 from models.cadirec_diffusion import SpacedDiffusion,space_timesteps
 from utils import get_full_sort_score, EarlyStopping, linear
 from models import cadirec_diffusion as gd
@@ -33,7 +33,7 @@ class Trainer:
 
 
     def _create_model(self):
-        self.model = ID4SRec(self.device, self.args)
+        self.model = SID4SRec(self.device, self.args)
         self.model.to(self.device)
         
         betas = gd.get_named_beta_schedule(self.args.noise_schedule, self.args.diffusion_steps, self.args.max_beta)

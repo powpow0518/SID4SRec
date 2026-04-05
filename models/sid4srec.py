@@ -13,10 +13,10 @@ from utils import (
     timestep_embedding
 )
 
-class ID4SRec(nn.Module):
+class SID4SRec(nn.Module):
 
     def __init__(self, device, args):
-        super(ID4SRec, self).__init__()
+        super(SID4SRec, self).__init__()
         self.item_size = args.item_size
         self.batch_size = args.train_batch_size
         self.hidden_size = args.hidden_size
